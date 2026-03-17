@@ -4,6 +4,7 @@
   --bg-card: #12121a;
   --text-primary: #f0e6e0;
   --text-secondary: #a89b8a;
+  --text-step: #000;
   --accent-jujak: #e74c3c;
   --accent-cheongryong: #3498db;
   --accent-baekho: #ecf0f1;
@@ -26,6 +27,11 @@
 body {
   font-family: 'Nanum Gothic', sans-serif;
   background: var(--bg-dark);
+  background-image: url('/bg-frame.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
   color: var(--text-primary);
   min-height: 100vh;
   overflow-x: hidden;
@@ -66,9 +72,8 @@ body::before {
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse at 20% 20%, rgba(231, 76, 60, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(52, 152, 219, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 50%, rgba(236, 240, 241, 0.03) 0%, transparent 70%);
+    radial-gradient(ellipse at 20% 20%, rgba(231, 76, 60, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(52, 152, 219, 0.06) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -80,6 +85,7 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
   padding-bottom: 100px;
 }
@@ -104,6 +110,7 @@ body::before {
 .step-header {
   text-align: center;
   margin-bottom: 2.5rem;
+  color: var(--text-step);
 }
 
 .step-header h2 {
@@ -112,17 +119,17 @@ body::before {
   font-weight: 600;
   margin-bottom: 0.5rem;
   line-height: 1.4;
+  color: var(--text-step);
 }
 
 .step-desc {
-  color: var(--text-secondary);
+  color: var(--text-step);
   font-size: 0.95rem;
 }
 
 /* ===== 스플래시 ===== */
 .splash-content {
   text-align: center;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,14 +143,11 @@ body::before {
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
   line-height: 1.4;
-  background: linear-gradient(135deg, var(--accent-jujak), var(--accent-cheongryong));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-step);
 }
 
 .splash-subtitle {
-  color: var(--text-secondary);
+  color: var(--text-step);
   font-size: 1.1rem;
   margin-bottom: 3rem;
 }
@@ -301,20 +305,20 @@ body::before {
 
 .step2-bottom-text {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-step);
   text-align: center;
 }
 
 /* ===== 3단계: STT ===== */
 .step3-keyword {
-  color: var(--accent-cheongryong);
+  color: var(--text-step);
 }
 
 .step3-instruction {
   width: 100%;
   text-align: center;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-step);
   margin-bottom: 1.5rem;
 }
 
@@ -366,7 +370,7 @@ body::before {
 .step3-bottom-text {
   margin-top: 1.5rem;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-step);
   text-align: center;
 }
 
@@ -557,10 +561,11 @@ body::before {
 .step4-status {
   font-size: 0.95rem;
   text-align: center;
+  color: var(--text-step);
 }
 
 .step4-keyword {
-  color: var(--accent-cheongryong);
+  color: var(--text-step);
   font-weight: 600;
 }
 
@@ -574,7 +579,7 @@ body::before {
 
 .progress-label {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-step);
 }
 
 .progress-bar {
@@ -625,7 +630,7 @@ body::before {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--accent-cheongryong);
+  color: var(--text-step);
 }
 
 .step5b-visual {
@@ -808,7 +813,7 @@ body::before {
 
 .qr-label {
   font-size: 0.9rem;
-  color: #f1c40f;
+  color: var(--text-step);
   font-weight: 600;
 }
 
@@ -830,7 +835,7 @@ body::before {
 
 .qr-desc {
   font-size: 0.85rem;
-  color: var(--text-secondary);
+  color: var(--text-step);
   text-align: center;
   line-height: 1.4;
 }
